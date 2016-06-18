@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e107Plugin name="Cookie Consent" lan="LAN_PLUGIN_BACKUP_DROPBOX_NAME" version="1.0" date="2016-06-18" compatibility="2.0" installRequired="true">
+	<author name="Lóna Lore" url="https://github.com/lonalore/cookie_consent"/>
+	<description lan="LAN_PLUGIN_BACKUP_DROPBOX_DESCRIPTION">The most popular solution to the EU Cookie Law.</description>
+	<category>tools</category>
+	<copyright>GNU General Public License</copyright>
+	<adminLinks>
+		<link url='admin_config.php' description='LAN_CONFIGURE' icon='images/cookie_consent_32.png' iconSmall='images/cookie_consent_16.png' primary='true' >LAN_CONFIGURE</link>
+	</adminLinks>
+	<pluginPrefs>
+		<pref name="message">LAN_COOKIE_CONSENT_FRONT_01</pref>
+		<pref name="dismiss">LAN_COOKIE_CONSENT_FRONT_02</pref>
+		<pref name="learnMore">LAN_COOKIE_CONSENT_FRONT_03</pref>
+		<pref name="link"></pref>
+		<pref name="container"></pref>
+		<pref name="theme">light-floating</pref>
+		<pref name="path">/</pref>
+		<pref name="domain"></pref>
+		<pref name="expiryDays">365</pref>
+		<pref name="target">_self</pref>
+		<pref name="cdn">1</pref>
+	</pluginPrefs>
+</e107Plugin>
