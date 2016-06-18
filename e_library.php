@@ -125,7 +125,17 @@ class cookie_consent_library
 				'lines'   => 5,
 			),
 			'files'             => array(
-				'js' => array(
+				'css' => array(
+					'build/dark-bottom.css',
+					'build/dark-floating.css',
+					'build/dark-floating-tada.css',
+					'build/dark-inline.css',
+					'build/dark-top.css',
+					'build/light-bottom.css',
+					'build/light-floating.css',
+					'build/light-top.css',
+				),
+				'js'  => array(
 					'build/cookieconsent2.min.js' => array(
 						'type' => 'footer',
 					),
@@ -133,7 +143,57 @@ class cookie_consent_library
 			),
 		);
 
+		// Silktide's 'cookieconsent2' CDN library.
+		$libraries['cdn.cookieconsent2'] = array(
+			'name'             => 'Cookie Consent',
+			'vendor_url'       => 'https://github.com/silktide/cookieconsent2',
+			'version_callback' => 'cdn_cookieconsent2_version_callback',
+			// Override library path to CDN.
+			'library_path'     => 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/',
+			'files'            => array(
+				'js' => array(
+					'cookieconsent.min.js' => array(
+						'type' => 'footer',
+					),
+				),
+			),
+		);
+
 		return $libraries;
+	}
+
+	/**
+	 * Version callback to provide version number for CDN library.
+	 */
+	function cdn_cookieconsent2_version_callback()
+	{
+		return '1.0.10';
+	}
+
+	/**
+	 * Alter the library information before detection and caching takes place.
+	 *
+	 * The library definitions are passed by reference. A common use-case is adding a plugin's integration files to the
+	 * library array, so that the files are loaded whenever the library is. As noted above, it is important to declare
+	 * integration files inside of an array, whose key is the plugin name.
+	 */
+	function config_alter(&$libraries)
+	{
+		$prefs = e107::getPlugConfig('cookie_consent')->getPref();
+
+		if((int) vartrue($prefs['cdn'], 0) === 0)
+		{
+			$theme = vartrue($prefs['theme'], 'light-floating');
+			$css = 'build/' . $theme . '.css';
+
+			foreach($libraries['cookieconsent2']['files']['css'] as $item)
+			{
+				if($item != $css)
+				{
+					unset($libraries['cookieconsent2']['files']['css'][$css]);
+				}
+			}
+		}
 	}
 
 }
