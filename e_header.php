@@ -23,7 +23,10 @@ class cookie_consent_e_header
 	 */
 	function __construct()
 	{
-		self::include_components();
+		if(USER_AREA)
+		{
+			self::include_components();
+		}
 	}
 
 
