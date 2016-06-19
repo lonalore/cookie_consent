@@ -2,7 +2,7 @@
 <e107Plugin name="Cookie Consent" lan="LAN_PLUGIN_COOKIE_CONSENT_NAME" version="1.0" date="2016-06-18" compatibility="2.0" installRequired="true">
 	<author name="Lóna Lore" url="https://github.com/lonalore/cookie_consent"/>
 	<summary lan="LAN_PLUGIN_COOKIE_CONSENT_SUMMARY">The most popular solution to the EU Cookie Law.</summary>
-	<description lan="LAN_PLUGIN_COOKIE_CONSENT_DESCRIPTION">The most popular solution to the EU Cookie Law.</description>
+	<description lan="LAN_PLUGIN_COOKIE_CONSENT_DESCRIPTION">The most popular solution to the EU Cookie Law. Cookie Consent is a lightweight JavaScript plugin for alerting users about the use of cookies on your website.</description>
 	<keywords>
 		<word>eu</word>
 		<word>cookie</word>
