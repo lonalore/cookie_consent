@@ -11,6 +11,8 @@ if(!defined('e107_INIT'))
 	exit;
 }
 
+// [PLUGINS]/cookie_consent/languages/[LANGUAGE]/[LANGUAGE]_front.php
+e107::lan('cookie_consent', false, true);
 
 /**
  * Class cookie_consent_e_header.

@@ -118,46 +118,46 @@ class cookie_consent_admin_ui extends e_admin_ui
 	 */
 	protected $prefs = array(
 		'message'    => array(
-			'title'       => LAN_COOKIE_CONSENT_ADMIN_12,
-			'description' => LAN_COOKIE_CONSENT_ADMIN_13,
-			'type'        => 'text',
-			'data'        => 'str',
-			'tab'         => 0,
+			'title' => LAN_COOKIE_CONSENT_ADMIN_12,
+			'help'  => LAN_COOKIE_CONSENT_ADMIN_13,
+			'type'  => 'text',
+			'data'  => 'str',
+			'tab'   => 0,
 		),
 		'dismiss'    => array(
-			'title'       => LAN_COOKIE_CONSENT_ADMIN_14,
-			'description' => LAN_COOKIE_CONSENT_ADMIN_15,
-			'type'        => 'text',
-			'data'        => 'str',
-			'tab'         => 0,
+			'title' => LAN_COOKIE_CONSENT_ADMIN_14,
+			'help'  => LAN_COOKIE_CONSENT_ADMIN_15,
+			'type'  => 'text',
+			'data'  => 'str',
+			'tab'   => 0,
 		),
 		'learnMore'  => array(
-			'title'       => LAN_COOKIE_CONSENT_ADMIN_16,
-			'description' => LAN_COOKIE_CONSENT_ADMIN_17,
-			'type'        => 'text',
-			'data'        => 'str',
-			'tab'         => 0,
+			'title' => LAN_COOKIE_CONSENT_ADMIN_16,
+			'help'  => LAN_COOKIE_CONSENT_ADMIN_17,
+			'type'  => 'text',
+			'data'  => 'str',
+			'tab'   => 0,
 		),
 		'link'       => array(
-			'title'       => LAN_COOKIE_CONSENT_ADMIN_18,
-			'description' => LAN_COOKIE_CONSENT_ADMIN_19,
-			'type'        => 'text',
-			'data'        => 'str',
-			'tab'         => 0,
+			'title' => LAN_COOKIE_CONSENT_ADMIN_18,
+			'help'  => LAN_COOKIE_CONSENT_ADMIN_19,
+			'type'  => 'text',
+			'data'  => 'str',
+			'tab'   => 0,
 		),
 		'container'  => array(
-			'title'       => LAN_COOKIE_CONSENT_ADMIN_20,
-			'description' => LAN_COOKIE_CONSENT_ADMIN_21,
-			'type'        => 'text',
-			'data'        => 'str',
-			'tab'         => 0,
+			'title' => LAN_COOKIE_CONSENT_ADMIN_20,
+			'help'  => LAN_COOKIE_CONSENT_ADMIN_21,
+			'type'  => 'text',
+			'data'  => 'str',
+			'tab'   => 0,
 		),
 		'theme'      => array(
-			'title'       => LAN_COOKIE_CONSENT_ADMIN_10,
-			'description' => LAN_COOKIE_CONSENT_ADMIN_11,
-			'type'        => 'dropdown',
-			'data'        => 'str',
-			'writeParms'  => array(
+			'title'      => LAN_COOKIE_CONSENT_ADMIN_10,
+			'help'       => LAN_COOKIE_CONSENT_ADMIN_11,
+			'type'       => 'dropdown',
+			'data'       => 'str',
+			'writeParms' => array(
 				'optArray' => array(
 					'light-floating'     => LAN_COOKIE_CONSENT_ADMIN_02,
 					'light-bottom'       => LAN_COOKIE_CONSENT_ADMIN_03,
@@ -169,35 +169,35 @@ class cookie_consent_admin_ui extends e_admin_ui
 					'dark-top'           => LAN_COOKIE_CONSENT_ADMIN_09,
 				),
 			),
-			'tab'         => 0,
+			'tab'        => 0,
 		),
 		'path'       => array(
-			'title'       => LAN_COOKIE_CONSENT_ADMIN_22,
-			'description' => LAN_COOKIE_CONSENT_ADMIN_23,
-			'type'        => 'text',
-			'data'        => 'str',
-			'tab'         => 0,
+			'title' => LAN_COOKIE_CONSENT_ADMIN_22,
+			'help'  => LAN_COOKIE_CONSENT_ADMIN_23,
+			'type'  => 'text',
+			'data'  => 'str',
+			'tab'   => 0,
 		),
 		'domain'     => array(
-			'title'       => LAN_COOKIE_CONSENT_ADMIN_24,
-			'description' => LAN_COOKIE_CONSENT_ADMIN_25,
-			'type'        => 'text',
-			'data'        => 'str',
-			'tab'         => 0,
+			'title' => LAN_COOKIE_CONSENT_ADMIN_24,
+			'help'  => LAN_COOKIE_CONSENT_ADMIN_25,
+			'type'  => 'text',
+			'data'  => 'str',
+			'tab'   => 0,
 		),
 		'expiryDays' => array(
-			'title'       => LAN_COOKIE_CONSENT_ADMIN_26,
-			'description' => LAN_COOKIE_CONSENT_ADMIN_27,
-			'type'        => 'number',
-			'data'        => 'int',
-			'tab'         => 0,
+			'title' => LAN_COOKIE_CONSENT_ADMIN_26,
+			'help'  => LAN_COOKIE_CONSENT_ADMIN_27,
+			'type'  => 'number',
+			'data'  => 'int',
+			'tab'   => 0,
 		),
 		'target'     => array(
-			'title'       => LAN_COOKIE_CONSENT_ADMIN_28,
-			'description' => LAN_COOKIE_CONSENT_ADMIN_29,
-			'type'        => 'text',
-			'data'        => 'str',
-			'tab'         => 0,
+			'title' => LAN_COOKIE_CONSENT_ADMIN_28,
+			'help'  => LAN_COOKIE_CONSENT_ADMIN_29,
+			'type'  => 'text',
+			'data'  => 'str',
+			'tab'   => 0,
 		),
 		'cdn'        => array(
 			'title'      => LAN_COOKIE_CONSENT_ADMIN_30,
@@ -215,9 +215,19 @@ class cookie_consent_admin_ui extends e_admin_ui
 	{
 		$prefs = e107::getPlugConfig('cookie_consent')->getPref();
 
-		if (empty($prefs['domain']))
+		if(empty($prefs['domain']))
 		{
-			$this->fields['domain']['value'] = $_SERVER['HTTP_HOST'];
+			e107::getPlugConfig('cookie_consent')->set('domain', $_SERVER['HTTP_HOST'])->save(false, true, false);
+			// FIXME find a way to set default value instead of e107::getPlugConfig().
+			// $this->fields['domain']['writeParms']['default'] = $_SERVER['HTTP_HOST'];
+		}
+
+		// After submit.
+		if (varset($_POST['cdn'], 0) == 0)
+		{
+			$cache = e107::getCache();
+			$cacheID = 'library_manager_' . md5('cookieconsent2');
+			$cache->clear($cacheID, true);
 		}
 	}
 

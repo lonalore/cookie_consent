@@ -136,7 +136,7 @@ class cookie_consent_library
 					'build/light-top.css',
 				),
 				'js'  => array(
-					'build/cookieconsent2.min.js' => array(
+					'build/cookieconsent.min.js' => array(
 						'type' => 'footer',
 					),
 				),
@@ -186,11 +186,11 @@ class cookie_consent_library
 			$theme = vartrue($prefs['theme'], 'light-floating');
 			$css = 'build/' . $theme . '.css';
 
-			foreach($libraries['cookieconsent2']['files']['css'] as $item)
+			foreach($libraries['cookieconsent2']['files']['css'] as $key => $item)
 			{
 				if($item != $css)
 				{
-					unset($libraries['cookieconsent2']['files']['css'][$css]);
+					unset($libraries['cookieconsent2']['files']['css'][$key]);
 				}
 			}
 		}
