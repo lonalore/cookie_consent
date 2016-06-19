@@ -10,7 +10,7 @@
 	<category>tools</category>
 	<copyright>GNU General Public License</copyright>
 	<adminLinks>
-		<link url='admin_config.php' description='LAN_CONFIGURE' icon='images/cookie_consent_32.png' iconSmall='images/cookie_consent_16.png' primary='true' >LAN_CONFIGURE</link>
+		<link url='admin_config.php' description='LAN_CONFIGURE' icon='images/cookie_consent_32.png' iconSmall='images/cookie_consent_16.png' icon128='images/cookie_consent_128.png' primary='true'>LAN_CONFIGURE</link>
 	</adminLinks>
 	<pluginPrefs>
 		<pref name="message">LAN_COOKIE_CONSENT_FRONT_01</pref>
