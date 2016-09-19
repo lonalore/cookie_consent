@@ -25,3 +25,8 @@ Please feel free to report any bug found. Pull requests, issues, and plugin reco
 If you think this plugin is useful and saves you a lot of work, a lot of costs (PHP developers are expensive) and let you sleep much better, then donating a small amount would be very cool.
 
 [![Paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PQYDBAMQ3D2UG)
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/lonalore/cookie_consent/badge.svg?style=beer-square)](https://beerpay.io/lonalore/cookie_consent)  [![Beerpay](https://beerpay.io/lonalore/cookie_consent/make-wish.svg?style=flat-square)](https://beerpay.io/lonalore/cookie_consent?focus=wish)
