@@ -58,6 +58,7 @@ class cookie_consent_e_header
 			'target'     => vartrue($prefs['target'], '_self'),
 		);
 
+		e107::library('load', 'jquery.once');
 		e107::js('settings', array('cookie_consent' => $settings));
 		e107::js('cookie_consent', 'js/cookie_consent.js', 'jquery', 4);
 
